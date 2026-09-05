@@ -1,527 +1,999 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
+    <!-- Primary Meta Tags -->
+    <title>Allwin Jabaraj | Full Stack Developer & Cloud Engineer</title>
+    <meta name="title" content="Allwin Jabaraj | Full Stack Developer & Cloud Engineer">
     <meta name="description"
-        content="Allwin Jabaraj - Full Stack Developer Portfolio">
+        content="Portfolio of Allwin Jabaraj, B.Tech Information Technology student at MRK Institute of Technology (CGPA 8.5). Aspiring Full Stack Developer and Cloud Engineer passionate about clean software architecture.">
+    <meta name="keywords"
+        content="Allwin Jabaraj, Full Stack Developer, Cloud Engineer, B.Tech IT, MRK Institute of Technology, Web Developer, Software Engineer, Portfolio">
+    <meta name="author" content="Allwin Jabaraj">
 
-    <title>Allwin Jabaraj | Full Stack Developer</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Allwin Jabaraj | Full Stack Developer & Cloud Engineer">
+    <meta property="og:description"
+        content="B.Tech IT Student & Aspiring Full Stack Developer passionate about building modern web experiences and cloud applications.">
+    <meta property="og:image" content="images/profile.jpg">
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Allwin Jabaraj | Full Stack Developer & Cloud Engineer">
+    <meta property="twitter:description"
+        content="B.Tech IT Student & Aspiring Full Stack Developer passionate about building modern web experiences and cloud applications.">
+    <meta property="twitter:image" content="images/profile.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-
-    <header class="header">
-
-        <nav class="navbar">
-
-            <a href="#home" class="logo">
-                AJ.
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="#home" class="nav-logo" aria-label="Allwin Jabaraj Home">
+                <span class="logo-text">ALLWIN</span><span class="logo-accent">JABARAJ</span>
             </a>
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#github" class="nav-link">GitHub</a></li>
+                <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
 
-            <button class="menu-btn" aria-label="Open menu">
-                ☰
-            </button>
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm resume-btn" id="resumeNavBtn" title="View & Print Resume">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Resume</span>
+                </button>
 
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
         </nav>
-
     </header>
 
-
-    <!-- ================= MAIN ================= -->
+    <!-- Overlay for mobile drawer -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <main>
-
-
-        <!-- ================= HERO ================= -->
-
-        <section id="home" class="hero">
-
-            <div class="hero-content">
-
-                <p class="hero-greeting">
-                    Hello, I'm
-                </p>
-
-                <h1>
-                    Allwin Jabaraj
-                </h1>
-
-                <h2>
-                    Full Stack Developer
-                </h2>
-
-                <p class="hero-description">
-                    I am a passionate developer focused on
-                    building modern web applications,
-                    solving real-world problems and
-                    continuously growing as a software engineer.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#projects"
-                       class="btn primary-btn">
-                        View My Work
-                    </a>
-
-                    <a href="#contact"
-                       class="btn secondary-btn">
-                        Contact Me
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section id="about" class="about section">
-
-            <div class="section-heading">
-
-                <p>Get To Know Me</p>
-
-                <h2>About Me</h2>
-
-            </div>
-
-
-            <div class="about-content">
-
-
-                <div class="about-image">
-
-                    <img
-                        src="assets/images/profile.jpg"
-                        alt="Allwin Jabaraj">
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <h3>
-                        Building. Learning. Growing.
-                    </h3>
-
-                    <p>
-                        I'm Allwin Jabaraj, a software
-                        development enthusiast passionate
-                        about building useful and
-                        meaningful applications.
-                    </p>
-
-                    <p>
-                        My current focus is becoming an
-                        industry-ready Full Stack Developer
-                        with strong software engineering
-                        fundamentals and cloud knowledge.
-                    </p>
-
-                    <p>
-                        I enjoy learning by building real-world
-                        projects, improving my problem-solving
-                        skills and working with modern
-                        development technologies.
-                    </p>
-
-                    <a href="#contact"
-                       class="btn primary-btn">
-                        Let's Connect
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SKILLS ================= -->
-
-        <section id="skills" class="skills section">
-
-            <div class="section-heading">
-
-                <p>What I Work With</p>
-
-                <h2>Skills</h2>
-
-            </div>
-
-
-            <div class="skills-container">
-
-
-                <div class="skill-card">
-
-                    <h3>Frontend</h3>
-
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Backend</h3>
-
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>REST APIs</li>
-                    </ul>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Database</h3>
-
-                    <ul>
-                        <li>MongoDB</li>
-                        <li>MySQL</li>
-                    </ul>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <h3>Tools & Development</h3>
-
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>VS Code</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= PROJECTS ================= -->
-
-        <section id="projects"
-                 class="projects section">
-
-            <div class="section-heading">
-
-                <p>What I've Built</p>
-
-                <h2>Projects</h2>
-
-            </div>
-
-
-            <div class="projects-container">
-
-
-                <!-- ARNS Travels -->
-
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <!-- Project image -->
+        <!-- ================= HERO SECTION ================= -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg-grid" aria-hidden="true"></div>
+            <div class="hero-bg-blur-1" aria-hidden="true"></div>
+            <div class="hero-bg-blur-2" aria-hidden="true"></div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="eyebrow-badge fade-reveal">
+                        <span class="pulse-dot"></span>
+                        <span>OPEN FOR FULL STACK & CLOUD ROLES</span>
                     </div>
 
+                    <h1 class="hero-title fade-reveal">
+                        ALLWIN <span class="text-gradient">JABARAJ</span>
+                    </h1>
 
-                    <div class="project-content">
+                    <h2 class="hero-subtitle fade-reveal">
+                        Aspiring Full Stack Developer & Cloud Engineer
+                    </h2>
 
-                        <h3>
-                            ARNS Travels
-                        </h3>
+                    <p class="hero-description fade-reveal">
+                        B.Tech Information Technology student at MRK Institute of Technology (CGPA 8.5). Passionate about engineering high-performance web applications, clean architecture, REST APIs, and scalable cloud solutions.
+                    </p>
 
-                        <p>
-                            A real-world travel project
-                            focused on building a clean,
-                            maintainable and scalable web
-                            application.
+                    <div class="hero-cta-group fade-reveal">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+
+                        <button class="btn btn-secondary" id="heroResumeBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            <span>View Resume</span>
+                        </button>
+                    </div>
+
+                    <div class="hero-socials fade-reveal">
+                        <span class="social-label">Connect:</span>
+                        <a href="https://github.com/allwinjabaraj" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-btn" aria-label="GitHub Profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/allwin-jabaraj-43a10b347" target="_blank"
+                            rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="mailto:allwinjabaraj4038@gmail.com" class="social-icon-btn" aria-label="Email Allwin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-reveal">
+                    <div class="profile-card-frame">
+                        <div class="profile-image-wrapper">
+                            <img src="images/profile.jpg" alt="Allwin Jabaraj Profile Photo" class="profile-img"
+                                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Allwin+Jabaraj&background=2563eb&color=ffffff&size=500';">
+                        </div>
+
+                        <!-- Floating Micro-Badge 1 -->
+                        <div class="floating-badge badge-top-right">
+                            <div class="badge-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </div>
+                            <div class="badge-text">
+                                <span class="badge-title">8.5 CGPA</span>
+                                <span class="badge-sub">Academic Score</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro-Badge 2 -->
+                        <div class="floating-badge badge-bottom-left">
+                            <div class="badge-icon icon-blue">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <div class="badge-text">
+                                <span class="badge-title">B.Tech IT</span>
+                                <span class="badge-sub">MRK Institute of Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= STATS HIGHLIGHT STRIP ================= -->
+        <section class="stats-strip bg-surface">
+            <div class="container stats-container">
+                <div class="stat-item">
+                    <span class="stat-value">8.5</span>
+                    <span class="stat-label">Cumulative CGPA</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">B.Tech IT</span>
+                    <span class="stat-label">Degree Focus</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">Clean Arch</span>
+                    <span class="stat-label">Design Standard</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">Full Stack</span>
+                    <span class="stat-label">Career Target</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= ABOUT SECTION ================= -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">01 — ABOUT ME</span>
+                    <h2 class="section-title">Turning curiosity into practical software.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-story-card">
+                        <div class="story-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <h3>Software Engineering Journey</h3>
+                        </div>
+
+                        <p class="story-paragraph">
+                            Hello! I'm <strong>Allwin Jabaraj</strong>, a B.Tech Information Technology student at
+                            <strong>MRK Institute of Technology</strong> with a CGPA of <strong>8.5</strong>. I am
+                            passionate about software engineering and enjoy learning how modern applications are
+                            designed, developed, and deployed.
+                        </p>
+                        <p class="story-paragraph">
+                            My current focus is on becoming an industry-ready <strong>Full Stack Developer</strong> and
+                            <strong>Cloud Engineer</strong>. I enjoy working on practical projects, understanding
+                            software architecture, improving my programming skills, and exploring modern technologies.
                         </p>
 
-
-                        <div class="project-tech">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Node.js</span>
-
+                        <div class="story-tags">
+                            <span class="tag">Problem Solving</span>
+                            <span class="tag">Clean Code</span>
+                            <span class="tag">System Design Fundamentals</span>
+                            <span class="tag">Continuous Learning</span>
                         </div>
-
-
-                        <div class="project-links">
-
-                            <a href="#"
-                               target="_blank">
-                                Live Demo
-                            </a>
-
-                            <a href="#"
-                               target="_blank">
-                                GitHub
-                            </a>
-
-                        </div>
-
                     </div>
 
-                </article>
-
-
-                <!-- Project 2 -->
-
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <!-- Project image -->
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <h3>
-                            Project Two
-                        </h3>
-
-                        <p>
-                            A project built to improve
-                            practical development and
-                            problem-solving skills.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>JavaScript</span>
-                            <span>Web Development</span>
-
+                    <!-- Bento-Style Info Cards -->
+                    <div class="bento-grid">
+                        <div class="bento-card">
+                            <div class="bento-num">01</div>
+                            <div class="bento-content">
+                                <h4>B.Tech</h4>
+                                <p>Information Technology</p>
+                            </div>
                         </div>
 
-
-                        <div class="project-links">
-
-                            <a href="#"
-                               target="_blank">
-                                Live Demo
-                            </a>
-
-                            <a href="#"
-                               target="_blank">
-                                GitHub
-                            </a>
-
+                        <div class="bento-card highlight-card">
+                            <div class="bento-num">02</div>
+                            <div class="bento-content">
+                                <h4>8.5</h4>
+                                <p>Cumulative CGPA</p>
+                            </div>
                         </div>
 
-                    </div>
-
-                </article>
-
-
-                <!-- Project 3 -->
-
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <!-- Project image -->
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <h3>
-                            More Projects
-                        </h3>
-
-                        <p>
-                            More projects and technical
-                            experiments will be added as
-                            I continue learning and building.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>Web</span>
-                            <span>Development</span>
-
+                        <div class="bento-card">
+                            <div class="bento-num">03</div>
+                            <div class="bento-content">
+                                <h4>MRK Institute</h4>
+                                <p>of Technology</p>
+                            </div>
                         </div>
 
-
-                        <div class="project-links">
-
-                            <a href="#"
-                               target="_blank">
-                                Explore
-                            </a>
-
+                        <div class="bento-card">
+                            <div class="bento-num">04</div>
+                            <div class="bento-content">
+                                <h4>Full Stack + Cloud</h4>
+                                <p>Career Focus</p>
+                            </div>
                         </div>
-
                     </div>
-
-                </article>
-
+                </div>
             </div>
-
         </section>
 
 
-        <!-- ================= EDUCATION ================= -->
-
-        <section id="education"
-                 class="education section">
-
-            <div class="section-heading">
-
-                <p>My Academic Journey</p>
-
-                <h2>Education</h2>
-
-            </div>
-
-
-            <div class="education-container">
-
-                <div class="education-card">
-
-                    <span class="education-year">
-                        Current
-                    </span>
-
-                    <h3>
-                        Education
-                    </h3>
-
-                    <p>
-                        Education details will be
-                        updated here.
-                    </p>
-
+        <!-- ================= EDUCATION SECTION ================= -->
+        <section id="education" class="section education-section bg-surface">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">02 — EDUCATION</span>
+                    <h2 class="section-title">My academic journey</h2>
                 </div>
 
-            </div>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-node">
+                            <div class="node-dot"></div>
+                        </div>
 
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <span class="timeline-period">Undergraduate Degree</span>
+                                <span class="timeline-badge">CGPA 8.5</span>
+                            </div>
+
+                            <h3 class="timeline-title">B.Tech — Information Technology</h3>
+                            <h4 class="timeline-subtitle">MRK Institute of Technology</h4>
+
+                            <p class="timeline-desc">
+                                Pursuing a comprehensive undergraduate degree focused on core software engineering
+                                principles, database management systems, data structures, algorithm analysis, and modern web software development.
+                            </p>
+
+                            <div class="timeline-highlights">
+                                <span class="pill">Data Structures & Algorithms</span>
+                                <span class="pill">Web Technologies</span>
+                                <span class="pill">Database Management</span>
+                                <span class="pill">Software Engineering</span>
+                                <span class="pill">Computer Networks</span>
+                                <span class="pill">Object Oriented Programming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
-        <!-- ================= CONTACT ================= -->
-
-        <section id="contact"
-                 class="contact section">
-
-            <div class="section-heading">
-
-                <p>Let's Connect</p>
-
-                <h2>Contact Me</h2>
-
-            </div>
-
-
-            <div class="contact-content">
-
-                <p>
-                    Have a project idea, collaboration
-                    opportunity or simply want to connect?
-                    Feel free to reach out.
-                </p>
-
-
-                <div class="contact-links">
-
-                    <a href="mailto:allwinjabaraj4038@gmail.com">
-                        Email
-                    </a>
-
-
-                    <a
-                        href="https://github.com/allwinjabaraj"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        GitHub
-                    </a>
-
-
-                    <a
-                        href="https://www.linkedin.com/in/allwin-jabaraj-43a10b347"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        LinkedIn
-                    </a>
-
+        <!-- ================= SKILLS SECTION ================= -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">03 — SKILLS</span>
+                    <h2 class="section-title">Technologies & tools I work with</h2>
                 </div>
 
-            </div>
+                <div class="skills-grid-expanded">
+                    <!-- Frontend -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Frontend Engineering</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="bullet"></span> HTML5 & Semantic Elements</li>
+                            <li class="skill-item"><span class="bullet"></span> CSS3 (Flexbox & Grid)</li>
+                            <li class="skill-item"><span class="bullet"></span> JavaScript (ES6+ Async/Promises)</li>
+                            <li class="skill-item"><span class="bullet"></span> Responsive Web Architecture</li>
+                        </ul>
+                    </div>
 
+                    <!-- Backend -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon icon-backend">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <h3>Backend & REST APIs</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="bullet"></span> Node.js Runtime</li>
+                            <li class="skill-item"><span class="bullet"></span> Express.js Framework</li>
+                            <li class="skill-item"><span class="bullet"></span> RESTful API Design</li>
+                            <li class="skill-item"><span class="bullet"></span> Middleware & Routing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon icon-db">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <h3>Database Systems</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="bullet"></span> MongoDB (NoSQL)</li>
+                            <li class="skill-item"><span class="bullet"></span> MySQL (Relational)</li>
+                            <li class="skill-item"><span class="bullet"></span> Data Modeling</li>
+                            <li class="skill-item"><span class="bullet"></span> CRUD Operations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3>Development Tools</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="bullet"></span> Git & Version Control</li>
+                            <li class="skill-item"><span class="bullet"></span> GitHub Workflow</li>
+                            <li class="skill-item"><span class="bullet"></span> VS Code Environment</li>
+                            <li class="skill-item"><span class="bullet"></span> Postman API Testing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Software Engineering -->
+                    <div class="skill-category-card learning-card">
+                        <div class="category-header">
+                            <div class="category-icon icon-learning">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3>Architecture & Cloud</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="bullet-learning"></span> Clean Architecture (MVC)</li>
+                            <li class="skill-item"><span class="bullet-learning"></span> Separation of Concerns</li>
+                            <li class="skill-item"><span class="bullet-learning"></span> Cloud Computing Basics</li>
+                            <li class="skill-item"><span class="bullet-learning"></span> Server Deployment Concepts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
+
+        <!-- ================= PROJECTS SECTION ================= -->
+        <section id="projects" class="section projects-section bg-surface">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">04 — PROJECTS</span>
+                    <h2 class="section-title">Things I've built</h2>
+                    <p class="section-subtitle">Practical projects that help me turn ideas into working software.</p>
+                </div>
+
+                <div class="projects-wrapper">
+                    <!-- Project 1: Featured Project ARNS Travels -->
+                    <article class="featured-project-card">
+                        <div class="project-banner">
+                            <span class="featured-badge">FEATURED PROJECT</span>
+                            <div class="project-visual-preview">
+                                <div class="code-window">
+                                    <div class="window-header">
+                                        <span class="dot dot-red"></span>
+                                        <span class="dot dot-yellow"></span>
+                                        <span class="dot dot-green"></span>
+                                        <div class="code-tabs">
+                                            <button class="code-tab active" data-tab="server">Server.js</button>
+                                            <button class="code-tab" data-tab="service">TravelService.js</button>
+                                        </div>
+                                    </div>
+                                    <pre class="code-preview" id="codeSnippetDisplay"><code><span class="code-keyword">const</span> express = require(<span class="code-string">'express'</span>);
+<span class="code-keyword">const</span> app = express();
+
+<span class="code-comment">// Clean Architecture & Modular Middleware</span>
+app.use(express.json());
+app.use(<span class="code-string">'/api/v1/travel'</span>, travelRoutes);
+app.use(<span class="code-string">'/api/v1/bookings'</span>, bookingController);
+
+<span class="code-keyword">const</span> PORT = process.env.PORT || <span class="code-number">5000</span>;
+app.listen(PORT, () => console.log(<span class="code-string">`Server on ${PORT}`</span>));</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-details">
+                            <h3 class="project-title">ARNS Travels</h3>
+
+                            <p class="project-description">
+                                A real-world travel and transport application developed with a focus on clean architecture,
+                                maintainability, and scalable software design. Features modularized controllers, services,
+                                repositories, and models for production-oriented development.
+                            </p>
+
+                            <div class="architecture-box">
+                                <span class="arch-title">Architectural Highlights:</span>
+                                <div class="arch-tags">
+                                    <span class="arch-tag">Clean Architecture</span>
+                                    <span class="arch-tag">Separation of Concerns</span>
+                                    <span class="arch-tag">Routes</span>
+                                    <span class="arch-tag">Controllers</span>
+                                    <span class="arch-tag">Services</span>
+                                    <span class="arch-tag">Repositories</span>
+                                    <span class="arch-tag">Models</span>
+                                    <span class="arch-tag">Production-Oriented</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Node.js</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/allwinjabaraj" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-primary btn-sm">
+                                    <span>View Repository</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+
+                                <a href="https://github.com/allwinjabaraj" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline btn-sm">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                        </path>
+                                    </svg>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Secondary Projects Grid -->
+                    <div class="projects-grid-two">
+                        <!-- Project 2 -->
+                        <article class="project-sub-card">
+                            <div class="sub-card-header">
+                                <div class="project-type-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                                    </svg>
+                                </div>
+                                <span class="project-badge-sm">REST API & Backend</span>
+                            </div>
+
+                            <h3 class="sub-card-title">Cloud Task Orchestrator & API Service</h3>
+                            <p class="sub-card-desc">
+                                A scalable backend REST service designed for asynchronous task scheduling, token authentication, and cloud data persistence. Built with structured middleware and clean endpoints.
+                            </p>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Express</span>
+                                <span class="tech-badge">REST APIs</span>
+                                <span class="tech-badge">MongoDB</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/allwinjabaraj" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline btn-sm">
+                                    <span>Explore Code</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+
+                        <!-- Project 3 -->
+                        <article class="project-sub-card">
+                            <div class="sub-card-header">
+                                <div class="project-type-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <span class="project-badge-sm">Frontend Platform</span>
+                            </div>
+
+                            <h3 class="sub-card-title">Developer Portfolio & Brand Platform</h3>
+                            <p class="sub-card-desc">
+                                High-performance personal brand application featuring glassmorphic UI elements, light-mode design system, accessible mobile drawers, and vanilla JS animations.
+                            </p>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS Grid</span>
+                                <span class="tech-badge">Vanilla JS</span>
+                                <span class="tech-badge">SEO</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="#home" class="btn btn-outline btn-sm">
+                                    <span>Live Preview</span>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= GITHUB SECTION ================= -->
+        <section id="github" class="section github-section">
+            <div class="container">
+                <div class="github-card">
+                    <div class="github-content">
+                        <span class="section-eyebrow eyebrow-light">05 — GITHUB</span>
+                        <h2 class="github-heading">Explore my code</h2>
+                        <p class="github-desc">
+                            Check out my projects, code experiments, and continuous learning journey on GitHub.
+                            I value version control, clean commits, and readable code.
+                        </p>
+
+                        <a href="https://github.com/allwinjabaraj" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-light">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                            <span>Visit GitHub ↗</span>
+                        </a>
+                    </div>
+
+                    <div class="github-visual">
+                        <div class="gh-stat-box">
+                            <div class="gh-user-info">
+                                <div class="gh-avatar">AJ</div>
+                                <div>
+                                    <div class="gh-name">Allwin Jabaraj</div>
+                                    <div class="gh-handle">@allwinjabaraj</div>
+                                </div>
+                            </div>
+                            <div class="gh-divider"></div>
+                            <div class="gh-stats-row">
+                                <div class="stat-col">
+                                    <span class="stat-num">Full Stack</span>
+                                    <span class="stat-lbl">Focus</span>
+                                </div>
+                                <div class="stat-col">
+                                    <span class="stat-num">Cloud</span>
+                                    <span class="stat-lbl">Interest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= ACHIEVEMENTS SECTION ================= -->
+        <section id="achievements" class="section achievements-section bg-surface">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">06 — ACHIEVEMENTS</span>
+                    <h2 class="section-title">Learning beyond the classroom</h2>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Web Development Certification</h3>
+                        <p class="ach-detail">Completed comprehensive training in Full Stack Web Development fundamentals, modern JS ES6+, and responsive web architecture.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Technical Innovation Hackathon</h3>
+                        <p class="ach-detail">Participated in college-level web application hackathons, building prototype web solutions within 24-hour development sprints.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Clean Architecture Design</h3>
+                        <p class="ach-detail">Successfully architected web services separating controllers, services, repositories, and data models to meet production standards.</p>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="ach-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3>Cloud & DevOps Workshops</h3>
+                        <p class="ach-detail">Attended technical hands-on workshops covering Cloud Infrastructure fundamentals, Git version control, and containerization concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">07 — CONTACT</span>
+                    <h2 class="section-title">Let's build something meaningful.</h2>
+                    <p class="section-subtitle">Have a project idea, collaboration opportunity, or just want to connect? Feel free to reach out.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information Column -->
+                    <div class="contact-info-col">
+                        <div class="contact-method-card" id="emailCopyCard" title="Click to copy email address">
+                            <div class="method-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Email (Click to Copy)</span>
+                                <a href="mailto:allwinjabaraj4038@gmail.com" class="method-link" id="emailText">allwinjabaraj4038@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method-card">
+                            <div class="method-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/allwin-jabaraj-43a10b347" target="_blank"
+                                    rel="noopener noreferrer" class="method-link">linkedin.com/in/allwin-jabaraj-43a10b347</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method-card">
+                            <div class="method-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">GitHub</span>
+                                <a href="https://github.com/allwinjabaraj" target="_blank" rel="noopener noreferrer"
+                                    class="method-link">github.com/allwinjabaraj</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Column -->
+                    <div class="contact-form-col">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
+                                    required>
+                                <span class="error-msg" id="nameError">Please enter your name</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="your.email@example.com" required>
+                                <span class="error-msg" id="emailError">Please enter a valid email address</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" class="form-input"
+                                    placeholder="Project Opportunity / Feedback" required>
+                                <span class="error-msg" id="subjectError">Please enter a subject</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5"
+                                    placeholder="Write your message here..." required></textarea>
+                                <span class="error-msg" id="messageError">Message must be at least 10 characters</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                                <span>Send Message</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- ================= RESUME OVERLAY MODAL ================= -->
+    <div class="modal-overlay" id="resumeModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <h2>ALLWIN JABARAJ</h2>
+                    <p>B.Tech Information Technology • CGPA 8.5</p>
+                </div>
+                <button class="modal-close" id="closeResumeModal" aria-label="Close Resume Modal">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="resume-sheet">
+                    <div class="resume-contact-bar">
+                        <span>📧 allwinjabaraj4038@gmail.com</span>
+                        <span>🔗 github.com/allwinjabaraj</span>
+                        <span>💼 linkedin.com/in/allwin-jabaraj-43a10b347</span>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3>PROFESSIONAL SUMMARY</h3>
+                        <p>B.Tech Information Technology student at MRK Institute of Technology with an 8.5 CGPA. Aspiring Full Stack Developer & Cloud Engineer with practical experience in HTML5, CSS3, JavaScript, Node.js, REST APIs, and clean software architecture design principles.</p>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3>EDUCATION</h3>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <strong>B.Tech in Information Technology</strong>
+                                <span>MRK Institute of Technology</span>
+                            </div>
+                            <p>Current Cumulative CGPA: 8.5 / 10</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3>TECHNICAL SKILLS</h3>
+                        <p><strong>Languages & Web:</strong> HTML5, CSS3, JavaScript (ES6+), Responsive Web Design</p>
+                        <p><strong>Backend & Cloud:</strong> Node.js, Express.js, REST APIs, Cloud Computing Concepts</p>
+                        <p><strong>Developer Tools:</strong> Git, GitHub, Visual Studio Code</p>
+                        <p><strong>Engineering Practices:</strong> Clean Architecture, Separation of Concerns, Problem Solving</p>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3>KEY PROJECTS</h3>
+                        <div class="resume-item">
+                            <strong>ARNS Travels — Travel & Transport Web Application</strong>
+                            <p>Built a clean architecture web application with modularized routes, controllers, service layers, and models for production-grade software design.</p>
+                        </div>
+                        <div class="resume-item">
+                            <strong>Cloud Task Orchestrator & API Service</strong>
+                            <p>Developed RESTful backend endpoints in Node.js/Express for task scheduling and API data persistence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-sm" onclick="window.print()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    <span>Print / Save CV</span>
+                </button>
+                <button class="btn btn-outline btn-sm" id="closeModalBtn">Close</button>
+            </div>
+        </div>
+    </div>
 
     <!-- ================= FOOTER ================= -->
-
     <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">ALLWIN JABARAJ</a>
+                <p class="footer-tagline">"Building. Learning. Growing."</p>
+            </div>
 
-        <p>
-            © 2026 Allwin Jabaraj.
-            All rights reserved.
-        </p>
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
 
+            <div class="footer-socials">
+                <a href="https://github.com/allwinjabaraj" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">GitHub</a>
+                <a href="https://www.linkedin.com/in/allwin-jabaraj-43a10b347" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">LinkedIn</a>
+                <a href="mailto:allwinjabaraj4038@gmail.com" aria-label="Email">Email</a>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; <span id="currentYear">2026</span> Allwin Jabaraj. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
-
 </body>
 
 </html>
